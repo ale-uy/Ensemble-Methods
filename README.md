@@ -1,6 +1,6 @@
 # Ensambles Paralelos 
 
-## Homogéneos
+## Homogéneos [Ampliar Información](https://github.com/ale-uy/Ensemble-Methods/blob/main/Homogeneous_Parallel_Ensembles.ipynb)
 
 * Los conjuntos (o ensambles) homogéneos paralelos promueven la diversidad de conjuntos a través de la aleatorización: muestreo aleatorio de ejemplos de entrenamiento y de características, o incluso la introducción de la aleatorización en el algoritmo de aprendizaje base.
 * El embolsado (**bagging**) es un método de conjunto simple que se basa en (1) muestreo de arranque (o muestreo con reemplazo), mas conocido como **bootstrap sampling**, para generar diversas réplicas del conjunto de datos y entrenar diversos modelos, y (2) la agregación de modelos para producir una predicción de conjunto a partir de un conjunto de predicciones de aprendizaje base individuales.
@@ -11,7 +11,7 @@
 * **Extra Trees** es otro método de conjunto similar a una bolsa que está diseñado específicamente para usar árboles extremadamente aleatorios como estudiantes base. Sin embargo, Extra Trees no utiliza muestreo *bootstrap* ya que la aleatorización adicional ayuda a generar diversidad de conjuntos.
 * Los bosques aleatorios proporcionan importancias de características para clasificar las más importantes desde un punto de vista predictivo.
 
-## Heterogéneos
+## Heterogéneos [Ampliar Información](https://github.com/ale-uy/Ensemble-Methods/blob/main/Heterogeneous_Parallel_Ensembles.ipynb)
 
 * Los métodos de conjuntos heterogéneos promueven la diversidad de conjuntos a través de la heterogeneidad; es decir, utilizan diferentes algoritmos de aprendizaje base para entrenar a los estimadores base.
 * Los métodos de ponderación (weighting methods) asignan a las predicciones individuales del estimador base un peso que corresponde a su desempeño; a los mejores estimadores base se les asignan pesos más altos e influyen más en la predicción final general.
@@ -25,7 +25,7 @@
 * Tanto los enfoques de ponderación como los de metaaprendizaje pueden usar las predicciones del estimador base directamente o las probabilidades de predicción. Este último generalmente conduce a un modelo más suave y matizado.
 
 # Ensambles Secuenciales
-## Refuerzo Adaptativo
+## Refuerzo Adaptativo [Ampliar Información](https://github.com/ale-uy/Ensemble-Methods/blob/main/Sequential_Ensembles_Adaptative_Boosting.ipynb)
 
 * El refuerzo adaptativo (**AdaBoost**) es un algoritmo de conjunto secuencial que utiliza aprendices débiles como estimadores básicos.
 * En la clasificación, un aprendiz débil es un modelo simple que funciona solo un poco mejor que adivinar al azar, es decir, 50% de precisión. Los tocones (stumps) de decisión y los árboles de decisión poco profundos son ejemplos de estudiantes débiles.
@@ -37,7 +37,7 @@
 * Debajo del capó, AdaBoost optimiza la función de pérdida exponencial (*exponential loss function*).
 * **LogitBoost** es otro algoritmo de impulso que optimiza la función de pérdida logística. Se diferencia de AdaBoost en dos formas: (1) trabaja con probabilidades de predicción y (2) usa cualquier algoritmo de clasificación como algoritmo de aprendizaje base.
 
-## Aumento de Gradiente
+## Aumento de Gradiente [Ampliar Información](https://github.com/ale-uy/Ensemble-Methods/blob/main/Sequential_Ensembles_Gradient_Boosting.ipynb)
 
 * El descenso de gradiente (*gradient descent*) se usa a menudo para minimizar una función de pérdida para entrenar un modelo de aprendizaje automático.
 * Los residuos, o errores entre las etiquetas verdaderas y las predicciones del modelo, se pueden usar para caracterizar ejemplos de entrenamiento clasificados correctamente y mal clasificados. Esto es análogo a cómo AdaBoost usa pesos.
@@ -50,7 +50,7 @@
 * Al igual que con AdaBoost, podemos evitar el sobreajuste en el aumento de gradiente eligiendo una tasa de aprendizaje efectiva o mediante una parada temprana (*early stopping*). LightGBM proporciona soporte para ambos.
 * Además de una amplia variedad de funciones de pérdida para regresión y clasificación, LightGBM también brinda soporte para la incorporación de nuestras propias funciones de pérdida personalizadas y específicas del problema para el entrenamiento.
 
-## Impulso de Newton
+## Impulso de Newton [Ampliar Información](https://github.com/ale-uy/Ensemble-Methods/blob/main/Sequential_Ensembles_Newton_boosting.ipynb)
 
 * El descenso de Newton es otro algoritmo de optimización, similar al descenso de gradiente.
 * El descenso de Newton usa información de segundo orden (*hessiana*) para acelerar la optimización en comparación con el descenso de gradiente, que solo usa información de primer orden (*gradiente*).
